@@ -1,4 +1,3 @@
-
 #[test]
 fn full_path() {
     defmac::defmac! { len x => x.len() }

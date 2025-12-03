@@ -121,12 +121,10 @@ macro_rules! defmac {
     };
 }
 
-
 #[cfg(test)]
 mod tests {
     #[test]
     fn it_works() {
-
         let value = "xyz";
 
         defmac!(none => value);
@@ -146,8 +144,7 @@ mod tests {
 
         defmac!(many a, b, c, d, e, f, g, h, i, j, k => (a, b + c, d + e + f,
                                                          g + h + i + j + k));
-        assert_eq!(many!(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11),
-                   (1, 5, 15, 45));
+        assert_eq!(many!(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), (1, 5, 15, 45));
     }
 
     #[test]
